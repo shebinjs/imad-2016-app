@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
+var articles = {
+    articleOne: {
     title: 'Article One - Shebin John Samuel',
     heading: 'Article One',
     date: '18 September 2016',
@@ -18,7 +19,27 @@ var articleOne = {
             <p>
                 This is the content for this article. I am learning how to write an html page and getting its bits and pieces from Tanmai. This is the content for this article. I am learning how to write an html page and getting its bits and pieces from Tanmai.This is the content for this article. I am learning how to write an html page and getting its bits and pieces from Tanmai.This is the content for this article. I am learning how to write an html page and getting its bits and pieces from Tanmai.
             </p>`
-}
+    },
+    articleTwo: {
+        title: 'Article Two - Shebin John Samuel',
+        heading: 'Article Two',
+        date: '19 September 2016',
+        content: `<p>
+                    This is the content for this article. I am learning how to write an html page and getting its bits and pieces from Tanmai. This is the content for this article. I am learning how to write an html page and getting its bits and pieces from Tanmai.This is the content for this article. I am learning how to write an html page and getting its bits and pieces from Tanmai.This is the content for this article. I am learning how to write an html page and getting its bits and pieces from Tanmai.
+                </p>
+                <p>
+                    This is the content for this article. I am learning how to write an html page and getting its bits and pieces from Tanmai. This is the content for this article. I am learning how to write an html page and getting its bits and pieces from Tanmai.This is the content for this article. I am learning how to write an html page and getting its bits and pieces from Tanmai.This is the content for this article. I am learning how to write an html page and getting its bits and pieces from Tanmai.
+                </p>`
+    },
+    articleThree: {
+        title: 'Article Three - Shebin John Samuel',
+        heading: 'Article Three',
+        date: '19 September 2016',
+        content: `<p>
+                    This is the content for this article. I am learning how to write an html page and getting its bits and pieces from Tanmai. This is the content for this article. I am learning how to write an html page and getting its bits and pieces from Tanmai.This is the content for this article. I am learning how to write an html page and getting its bits and pieces from Tanmai.This is the content for this article. I am learning how to write an html page and getting its bits and pieces from Tanmai.
+                </p>`
+    }
+};
 
 function createTemplate (data) {
     var title = data.title;
